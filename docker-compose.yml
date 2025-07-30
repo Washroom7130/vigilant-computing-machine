@@ -8,6 +8,9 @@ services:
       MYSQL_ROOT_PASSWORD: superlongpassword
       MYSQL_USER: api_manager
       MYSQL_PASSWORD: StrongPassword123!
+      MYSQL_CHARSET: utf8mb4
+      MYSQL_COLLATION: utf8mb4_unicode_ci
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
       - ./ini.sql:/docker-entrypoint-initdb.d/ini.sql
       - ./ini2.sql:/docker-entrypoint-initdb.d/ini2.sql
@@ -21,7 +24,7 @@ services:
 
   backend:
     environment:
-      DB_URL: jdbc:mysql://mysql:3306/event_management_sys
+      DB_URL: jdbc:mysql://mysql:3306/event_management_sys?useUnicode=true&characterEncoding=utf8mb4
       DB_USERNAME: api_manager
       DB_PASSWORD: StrongPassword123!
       GMAIL_USERNAME: ${GMAIL_USERNAME}
