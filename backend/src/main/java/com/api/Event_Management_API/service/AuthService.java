@@ -133,7 +133,9 @@ public class AuthService {
 
         if (optionalTaikhoan.isEmpty() ||
             !passwordEncoder.matches(loginRequest.getPassword(), optionalTaikhoan.get().getMatKhau())) {
-                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "Incorrect credentials"));
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "Incorrect credentials", 
+                                                                                    "hashed_password", passwordEncoder.encode(loginRequest.getPassword()),
+                                                                                    "db_hashed_password", optionalTaikhoan.get().getMatKhau()));
             }
         
         TaiKhoan taiKhoan = optionalTaikhoan.get();
@@ -145,7 +147,7 @@ public class AuthService {
 
         // Disallow login for account that has been deactivated
         if (!"Hoạt động".equals(taiKhoan.getTrangThai())) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "Incorrect credentials"));
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "Deactivated account"));
         }
 
         String token = jwtUtil.generateToken(

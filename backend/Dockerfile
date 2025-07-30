@@ -7,4 +7,4 @@ FROM openjdk:17-jdk
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
 EXPOSE 5555
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Dfile.encoding=UTF-8", "-jar", "app.jar"]

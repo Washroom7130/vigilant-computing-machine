@@ -24,7 +24,7 @@ services:
 
   backend:
     environment:
-      DB_URL: jdbc:mysql://mysql:3306/event_management_sys?useUnicode=true&characterEncoding=utf8mb4
+      DB_URL: jdbc:mysql://mysql:3306/event_management_sys?useUnicode=true&characterEncoding=utf
       DB_USERNAME: api_manager
       DB_PASSWORD: StrongPassword123!
       GMAIL_USERNAME: ${GMAIL_USERNAME}
