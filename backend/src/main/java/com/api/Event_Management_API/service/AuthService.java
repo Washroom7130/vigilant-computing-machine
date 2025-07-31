@@ -130,12 +130,14 @@ public class AuthService {
         }
 
         Optional<TaiKhoan> optionalTaikhoan = taiKhoanRepo.findByTenDangNhap(loginRequest.getUsername());
-
+/* 
+ , 
+                                                                                    "hashed_password", passwordEncoder.encode(loginRequest.getPassword()),
+                                                                                    "db_hashed_password", optionalTaikhoan.get().getMatKhau()
+ */
         if (optionalTaikhoan.isEmpty() ||
             !passwordEncoder.matches(loginRequest.getPassword(), optionalTaikhoan.get().getMatKhau())) {
-                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "Incorrect credentials", 
-                                                                                    "hashed_password", passwordEncoder.encode(loginRequest.getPassword()),
-                                                                                    "db_hashed_password", optionalTaikhoan.get().getMatKhau()));
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "Incorrect credentials"));
             }
         
         TaiKhoan taiKhoan = optionalTaikhoan.get();
