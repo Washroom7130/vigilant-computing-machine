@@ -1,6 +1,6 @@
 USE event_management_sys;
 
-IINSERT INTO SuKien (tenSuKien, moTa, diaDiem, trangThaiSuKien, phiThamGia, luongChoNgoi, ngayBatDau, ngayKetThuc, maDanhMuc) VALUES
+INSERT INTO SuKien (tenSuKien, moTa, diaDiem, trangThaiSuKien, phiThamGia, luongChoNgoi, ngayBatDau, ngayKetThuc, maDanhMuc) VALUES
 ('TechTalk 2024', 'Su kien chia se cong nghe AI va Blockchain', 'TP.HCM, Innovation Hub', 'Con cho', 100000, 100, '2024-05-10', '2024-05-12', 1),
 ('Dem Nhac Gai Quy', 'Chuong trinh ca nhac quyen gop tu thien', 'Ha Noi, Nha hat Lon', 'Het cho', 0, 200, '2024-06-01', '2024-06-01', 2),
 ('Art Expo 2025', 'Trien lam cac tac pham hoi hoa hien dai', 'Da Nang, Bao tang My thuat', 'Da ket thuc', 50000, 150, '2025-03-20', '2025-03-22', 3),
