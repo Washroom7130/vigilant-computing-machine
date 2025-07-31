@@ -70,7 +70,7 @@ public class AuthService {
         tk.setMaTaiKhoan(UUID.randomUUID().toString());
         tk.setTenDangNhap(request.getUsername());
         tk.setMatKhau(passwordEncoder.encode(request.getPassword())); // Hash password
-        tk.setTrangThai("Hoạt động");
+        tk.setTrangThai("Hoat dong");
         tk.setVaiTro("KhachHang");
         tk.setNgayTao(LocalDateTime.now());
         tk.setMaKhachHang(kh.getMaKhachHang());
@@ -148,7 +148,7 @@ public class AuthService {
         }
 
         // Disallow login for account that has been deactivated
-        if (!"Hoạt động".equals(taiKhoan.getTrangThai())) {
+        if (!"Hoat dong".equals(taiKhoan.getTrangThai())) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "Deactivated account"));
         }
 

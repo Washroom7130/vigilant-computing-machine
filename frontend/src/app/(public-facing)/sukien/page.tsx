@@ -153,7 +153,7 @@ function SuKienPageContent() {
                   Tất cả
                 </Link>
               </li>
-              {[ 'Còn chỗ', 'Hết chỗ', 'Hết hạn đăng ký', 'Đang diễn ra', 'Đã kết thúc', 'Hủy bỏ' ].map((status) => (
+              {[ 'Con cho', 'Het cho', 'Het han dang ky', 'Dang dien ra', 'Da ket thuc', 'Huy bo' ].map((status) => (
                 <li key={status}>
                   <Link
                     href={`/sukien?trangThai=${encodeURIComponent(status)}${categoryParam !== 'all' ? `&category=${categoryParam}` : ''}${costEndParam ? `&costStart=0&costEnd=${costEndParam}` : ''}`}

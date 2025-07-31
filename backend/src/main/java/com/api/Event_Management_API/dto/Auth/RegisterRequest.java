@@ -41,7 +41,7 @@ public class RegisterRequest {
     @UniqueEmail
     private String email;
 
-    @Pattern(regexp = "^(Nam|Nữ|Khác)$", message = "Please enter a valid gender")
+    //@Pattern(regexp = "^(Nam|Nữ|Khác)$", message = "Please enter a valid gender")
     private String gender;
 
     @Min(value = 18, message = "Minimum age is 18")

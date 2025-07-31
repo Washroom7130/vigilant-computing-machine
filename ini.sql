@@ -197,7 +197,7 @@ VALUES (
     '66a580dc-3400-479d-a0cd-3e0fedcdf8db',
     'admin',
     '$2a$10$fd8mAqdcMoQPn/4R7sxeJugSmslPKWjLh4ahB/Wqxeosi.CgK38Py',
-    'Hoạt động',
+    'Hoat dong',
     'QuanLy',
     TRUE,
     LAST_INSERT_ID()
@@ -220,16 +220,16 @@ INSERT INTO KhachHang (hoTen, diaChi, email, phone, gioiTinh, soTuoi) VALUES
 SET @first_khachhang_id = LAST_INSERT_ID();
 
 INSERT INTO TaiKhoan (maTaiKhoan, tenDangNhap, matKhau, trangThai, vaiTro, xacMinhEmail, maKhachHang) VALUES
-(UUID(), 'anuser', 'nologin', 'Hoạt động', 'KhachHang', TRUE, @first_khachhang_id + 0),
-(UUID(), 'bichtran', 'nologin', 'Dừng hoạt động', 'KhachHang', TRUE, @first_khachhang_id + 1),
-(UUID(), 'cuongpham', 'nologin', 'Hoạt động', 'KhachHang', TRUE, @first_khachhang_id + 2),
-(UUID(), 'daole', 'nologin', 'Hoạt động', 'KhachHang', TRUE, @first_khachhang_id + 3),
-(UUID(), 'hoangem', 'nologin', 'Dừng hoạt động', 'KhachHang', TRUE, @first_khachhang_id + 4),
-(UUID(), 'hoado', 'nologin', 'Hoạt động', 'KhachHang', TRUE, @first_khachhang_id + 5),
-(UUID(), 'huyvo', 'nologin', 'Hoạt động', 'KhachHang', TRUE, @first_khachhang_id + 6),
-(UUID(), 'khanhng', 'nologin', 'Dừng hoạt động', 'KhachHang', TRUE, @first_khachhang_id + 7),
-(UUID(), 'linhpham', 'nologin', 'Hoạt động', 'KhachHang', TRUE, @first_khachhang_id + 8),
-(UUID(), 'mytran', 'nologin', 'Hoạt động', 'KhachHang', TRUE, @first_khachhang_id + 9);
+(UUID(), 'anuser', 'nologin', 'Hoat dong', 'KhachHang', TRUE, @first_khachhang_id + 0),
+(UUID(), 'bichtran', 'nologin', 'Dung Hoat dong', 'KhachHang', TRUE, @first_khachhang_id + 1),
+(UUID(), 'cuongpham', 'nologin', 'Hoat dong', 'KhachHang', TRUE, @first_khachhang_id + 2),
+(UUID(), 'daole', 'nologin', 'Hoat dong', 'KhachHang', TRUE, @first_khachhang_id + 3),
+(UUID(), 'hoangem', 'nologin', 'Dung Hoat dong', 'KhachHang', TRUE, @first_khachhang_id + 4),
+(UUID(), 'hoado', 'nologin', 'Hoat dong', 'KhachHang', TRUE, @first_khachhang_id + 5),
+(UUID(), 'huyvo', 'nologin', 'Hoat dong', 'KhachHang', TRUE, @first_khachhang_id + 6),
+(UUID(), 'khanhng', 'nologin', 'Dung Hoat dong', 'KhachHang', TRUE, @first_khachhang_id + 7),
+(UUID(), 'linhpham', 'nologin', 'Hoat dong', 'KhachHang', TRUE, @first_khachhang_id + 8),
+(UUID(), 'mytran', 'nologin', 'Hoat dong', 'KhachHang', TRUE, @first_khachhang_id + 9);
 
 -- Insert NhanVien + TaiKhoan
 INSERT INTO NhanVien (hoTen, diaChi, email, phone, gioiTinh, soTuoi) VALUES
@@ -249,23 +249,23 @@ SET @first_nhanvien_id = LAST_INSERT_ID();
 
 -- TaiKhoan for NhanVien
 INSERT INTO TaiKhoan (maTaiKhoan, tenDangNhap, matKhau, trangThai, vaiTro, xacMinhEmail, maNhanVien) VALUES
-(UUID(), 'nambui', '$2a$10$3mTEbyhq7rAp9kCN/ZK9Auj92I/ekyDR43kimH4PbZqhhZiG/.mVu', 'Hoạt động', 'NhanVien', TRUE, @first_nhanvien_id + 0),
-(UUID(), 'oanhngo', 'nologin', 'Dừng hoạt động', 'NhanVien', TRUE, @first_nhanvien_id + 1),
-(UUID(), 'phucdang', 'nologin', 'Hoạt động', 'NhanVien', TRUE, @first_nhanvien_id + 2),
-(UUID(), 'quenguyen', 'nologin', 'Hoạt động', 'NhanVien', TRUE, @first_nhanvien_id + 3),
-(UUID(), 'sangtran', 'nologin', 'Dừng hoạt động', 'NhanVien', TRUE, @first_nhanvien_id + 4),
-(UUID(), 'thanhpham', 'nologin', 'Hoạt động', 'NhanVien', TRUE, @first_nhanvien_id + 5),
-(UUID(), 'tienle', 'nologin', 'Hoạt động', 'NhanVien', TRUE, @first_nhanvien_id + 6),
-(UUID(), 'uyenho', 'nologin', 'Hoạt động', 'NhanVien', TRUE, @first_nhanvien_id + 7),
-(UUID(), 'vinhvo', 'nologin', 'Dừng hoạt động', 'NhanVien', TRUE, @first_nhanvien_id + 8),
-(UUID(), 'xuannguyen', 'nologin', 'Hoạt động', 'NhanVien', TRUE, @first_nhanvien_id + 9),
-(UUID(), 'yentran', 'nologin', 'Hoạt động', 'NhanVien', TRUE, @first_nhanvien_id + 10);
+(UUID(), 'nambui', '$2a$10$3mTEbyhq7rAp9kCN/ZK9Auj92I/ekyDR43kimH4PbZqhhZiG/.mVu', 'Hoat dong', 'NhanVien', TRUE, @first_nhanvien_id + 0),
+(UUID(), 'oanhngo', 'nologin', 'Dung Hoat dong', 'NhanVien', TRUE, @first_nhanvien_id + 1),
+(UUID(), 'phucdang', 'nologin', 'Hoat dong', 'NhanVien', TRUE, @first_nhanvien_id + 2),
+(UUID(), 'quenguyen', 'nologin', 'Hoat dong', 'NhanVien', TRUE, @first_nhanvien_id + 3),
+(UUID(), 'sangtran', 'nologin', 'Dung Hoat dong', 'NhanVien', TRUE, @first_nhanvien_id + 4),
+(UUID(), 'thanhpham', 'nologin', 'Hoat dong', 'NhanVien', TRUE, @first_nhanvien_id + 5),
+(UUID(), 'tienle', 'nologin', 'Hoat dong', 'NhanVien', TRUE, @first_nhanvien_id + 6),
+(UUID(), 'uyenho', 'nologin', 'Hoat dong', 'NhanVien', TRUE, @first_nhanvien_id + 7),
+(UUID(), 'vinhvo', 'nologin', 'Dung Hoat dong', 'NhanVien', TRUE, @first_nhanvien_id + 8),
+(UUID(), 'xuannguyen', 'nologin', 'Hoat dong', 'NhanVien', TRUE, @first_nhanvien_id + 9),
+(UUID(), 'yentran', 'nologin', 'Hoat dong', 'NhanVien', TRUE, @first_nhanvien_id + 10);
 
 -- Insert into DanhMucSuKien
 INSERT INTO DanhMucSuKien (tenDanhMuc) VALUES
-('Hội Thảo Công Nghệ'),
-('Chương Trình Từ Thiện'),
-('Triển Lãm Nghệ Thuật'),
-('Khóa Học Kỹ Năng'),
-('Giải Đấu Thể Thao');
+('Hoi Thao Cong Nghe'),
+('Chuong Trinh Tu Thien'),
+('Trien Lam Nghe Thuat'),
+('Khoa Hoc Ky Nang'),
+('Giai Dau The Thao');
 
