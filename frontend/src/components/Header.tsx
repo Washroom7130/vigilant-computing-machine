@@ -73,7 +73,7 @@ export default function Header() {
                 <nav className="main-menu">
                 <ul>
                     <li><Link href="/">Trang chủ</Link></li>
-                    <li><Link href="/sukien">Sự Kiện</Link></li>
+                    <li><Link href="/sukien">Sự Kiện 123</Link></li>
                     <li><Link href="/about">Giới thiệu</Link></li>
                     <li><Link href="/lienhe">Liên hệ</Link></li>
                 </ul>
