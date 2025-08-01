@@ -76,7 +76,7 @@ export default function Header() {
                     <li><Link href="/sukien">Sự Kiện</Link></li>
                     <li><Link href="/about">Giới thiệu</Link></li>
                     <li><Link href="/lienhe">Liên hệ</Link></li>
-                    <li><Link href="/cicd">CI/CD</Link></li>
+                    <li><Link href="/cicd">CI/CD Test</Link></li>
                 </ul>
                 </nav>
 
