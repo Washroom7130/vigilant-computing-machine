@@ -2,6 +2,10 @@
 DROP DATABASE IF EXISTS event_management_sys;
 
 -- Create database
+CREATE DATABASE sonar 
+    DEFAULT CHARACTER SET utf8mb4 
+    DEFAULT COLLATE utf8mb4_unicode_ci;
+
 CREATE DATABASE IF NOT EXISTS event_management_sys
   DEFAULT CHARACTER SET utf8mb4
   DEFAULT COLLATE utf8mb4_unicode_ci;

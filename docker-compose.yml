@@ -75,7 +75,7 @@ services:
     image: sonarqube
     restart: always
     ports:
-      - "9000:9000"  # Expose SonarQube on port 9000
+      - "9000:9000"
     networks:
       - backend-net
     environment:
@@ -85,6 +85,8 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
+    volumes:
+      - ./mysql-connector-j-9.4.0.jar:/opt/sonarqube/extensions/jdbc-driver/mysql/mysql-connector-java.jar
 
 networks:
   backend-net:
