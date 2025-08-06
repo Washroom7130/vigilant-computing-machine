@@ -71,6 +71,18 @@ services:
     networks:
       - backend-net
 
+  sonarqube:
+    image: sonarqube
+    restart: always
+    ports:
+      - "9000:9000"  # Expose SonarQube on port 9000
+    networks:
+      - backend-net
+    environment:
+      SONAR_JDBC_URL: jdbc:mysql://mysql:3306/sonar?useUnicode=true&characterEncoding=UTF-8
+      SONAR_JDBC_USERNAME: api_manager
+      SONAR_JDBC_PASSWORD: StrongPassword123!
+
 networks:
   backend-net:
     driver: bridge
