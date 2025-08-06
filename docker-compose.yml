@@ -82,6 +82,9 @@ services:
       SONAR_JDBC_URL: jdbc:mysql://mysql:3306/sonar?useUnicode=true&characterEncoding=UTF-8
       SONAR_JDBC_USERNAME: api_manager
       SONAR_JDBC_PASSWORD: StrongPassword123!
+    depends_on:
+      mysql:
+        condition: service_healthy
 
 networks:
   backend-net:
