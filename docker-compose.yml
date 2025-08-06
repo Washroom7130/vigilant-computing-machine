@@ -71,23 +71,6 @@ services:
     networks:
       - backend-net
 
-  sonarqube:
-    image: sonarqube
-    restart: always
-    ports:
-      - "9000:9000"
-    networks:
-      - backend-net
-    environment:
-      SONAR_JDBC_URL: jdbc:mysql://mysql:3306/sonar?useUnicode=true&characterEncoding=UTF-8
-      SONAR_JDBC_USERNAME: api_manager
-      SONAR_JDBC_PASSWORD: StrongPassword123!
-    depends_on:
-      mysql:
-        condition: service_healthy
-    volumes:
-      - ./mysql-connector-j-9.4.0.jar:/opt/sonarqube/extensions/jdbc-driver/mysql/mysql-connector-java.jar
-
 networks:
   backend-net:
     driver: bridge
